@@ -1,36 +1,45 @@
-import React from "react";
-import styled from "styled-componenets";
+import React, { useContext } from "react";
+import styled from "styled-components";
+import editContext from "../editContext";
 
 const Container = styled.div`
   width: 50%;
   height: 100%;
-  padding: 12px;
-  border-right: 2px solid rgba(20,20,20, 0.3);
-  font-family: 'Lato', sans-serif;
+  padding: 10px;
+  border-right: 2px solid rgba(20, 20, 20, 0.2);
+  font-family: "Lato", sans-serif;
 `;
 
 const Title = styled.div`
   font-size: 25px;
   font-weight: 500;
-  font0family: "Lato", sans-serif;
   margin-bottom: 12px;
+  text-align: center;
   padding: 10px 0;
-  border-right: 2px solid rgba(20,20,20, 0.3);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.2);
 `;
 
-const InputArea = styled.textarea`
+const TextArea = styled.textarea`
   width: 100%;
   height: 100%;
   resize: none;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 14px;
 `;
 
 export function MarkdownInput(props) {
-  return 
-  <Container>
-    <Title> Input Text </Title>
-    <InputArea />
-  </Container>
+  const { setMarkdownText } = useContext(editContext);
+
+  const onInputChange = evt => {
+    const newValue = evt.currentTarget.value;
+    setMarkdownText(newValue);
+  };
+
+  return (
+    <Container>
+      <Title>Markdown Text</Title>
+      <TextArea onChange={onInputChange} />
+    </Container>
+  );
 }
