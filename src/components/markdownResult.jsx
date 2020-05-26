@@ -24,6 +24,8 @@ const ResultArea = styled.div`
   height: 100%;
   border: none;
   font-size: 14px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 10px;
 `;
 
 export function MarkdownResult(props) {

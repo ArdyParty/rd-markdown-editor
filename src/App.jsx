@@ -38,7 +38,7 @@ export default function App() {
   return (
     <EditContext.Provider value={contextValue}>
       <AppContainer>
-        <Title>Ardy Party's markdown editor</Title>
+        <Title>Ardy Party's Markdown Editor</Title>
         <EditContainer>
           <MarkdownInput />
           <MarkdownResult />

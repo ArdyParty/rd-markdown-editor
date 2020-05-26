@@ -3,6 +3,8 @@ html, body, #root {
   min-height: 100vh;
   height: 100%;
   padding: 0;
+  background-color: linen;
+  color: rgba(153,153,153,1);
 }
 
 .App {

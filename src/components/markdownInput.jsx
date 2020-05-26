@@ -22,10 +22,11 @@ const Title = styled.div`
 const TextArea = styled.textarea`
   width: 100%;
   height: 100%;
-  resize: none;
   border: none;
   outline: none;
   font-size: 14px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 10px;
 `;
 
 export function MarkdownInput(props) {
